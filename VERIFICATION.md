@@ -3,6 +3,11 @@
 Executed locally on 28 August 2026 (Asia/Kolkata) against repository commit source and
 upstream Collaborative Gym commit `58972c0702412f293e303c3e49b6cc896db2467a`.
 
+The dependency-light GitHub Actions workflow runs the base test, lint, and strict core
+type-check suite on Python 3.11 and 3.12. The optional upstream Co-Gym Runner/Redis check is
+recorded separately below because it requires the pinned upstream source and Redis; it is
+an integration check, not part of the scientific result.
+
 | Check | Actual status |
 |---|---|
 | Source compile | Passed |

@@ -1,20 +1,30 @@
 # Dynamic Delegation in Collaborative Gym
 
-Short repository/project name: **DelegationGym**. Status: **Working research prototype · deterministic validation**.
+**Independent Co-Gym extension · working research prototype · deterministic mechanism validation**
 
-DelegationGym is an independent research prototype for measuring whether a collaborative
-agent changes its behavior when a human changes the delegated autonomy boundary during a
-task. The checked-in 500-episode run is a **deterministic benchmark/mechanism validation**,
-not an LLM-agent evaluation or human-agent study.
+**Can a collaborative agent adapt correctly when a human-specified delegation boundary
+changes while the task is still underway?**
 
-It is an independent extension of the public
-[Collaborative Gym](https://github.com/SALT-NLP/collaborative-gym) framework. It is not
-an official SALT Lab project.
+DelegationGym adds an explicit, time-varying `DelegationState` to the public
+[Collaborative Gym](https://github.com/SALT-NLP/collaborative-gym) framework, including
+approval, revocation, and return-of-control transitions. It adds delegation-specific
+evaluation and trajectory analyses for behavior against the currently active state.
+
+**Current evidence:** 500 deterministic benchmark episodes across 5 delegation conditions
+and 4 deterministic reference policies. **No LLMs were evaluated. No human participants
+were studied.** This run validates mechanics and instrumentation, not human behavior.
+
+[Results](#results) · [Methods](docs/METHOD.md) · [Metrics](docs/METRICS.md) ·
+[Limitations](docs/LIMITATIONS.md) · [Reproduce](#reproduce-experiments) ·
+[Upstream Co-Gym](UPSTREAM.md)
+
+![Outcome Twins parallel trajectory](results/figures/figure5_outcome_twins.png)
+
+Short repository/project name: **DelegationGym**. Public status: **Working research
+prototype · deterministic validation**. This is an independent extension of the public
+Collaborative Gym framework and is not an official SALT Lab project.
 
 ## Research question
-
-**Can a collaborative agent adapt correctly when the human-specified delegation boundary
-changes while the task is still underway?**
 
 DelegationGym separates technical capability from current delegation. For each action
 category, the current, versioned state says whether the agent may `ACT`, should `ASK`, must
@@ -108,7 +118,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/build_trace_atlas.py
 .venv/bin/pytest
 .venv/bin/ruff check src tests scripts
-.venv/bin/mypy src/delegation_gym --exclude cogym_env.py --python-version 3.14
+.venv/bin/mypy src/delegation_gym
 ```
 
 To exercise the adapter against the exact source revision without importing Co-Gym's
@@ -163,8 +173,6 @@ The atlas contains a canonical event table, predeclared collaboration fingerprin
 top Outcome Twin pairs. Pairs first pass a task-score epsilon of 0.01; process features are
 then z-normalized over the evaluated episodes and ranked by Euclidean distance. The
 checked-in run surfaced 20 top-ranked pairs (the configured display limit).
-
-![Outcome Twins parallel trajectory](results/figures/figure5_outcome_twins.png)
 
 ## Limitations
 
