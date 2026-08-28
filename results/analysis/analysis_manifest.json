@@ -1,0 +1,18 @@
+{
+  "evaluation_type": "deterministic benchmark/mechanism validation",
+  "scientific_scope": "mechanism validation only; not an LLM-agent evaluation or human-agent study",
+  "llm_agent_evaluation": false,
+  "human_study": false,
+  "model_used": false,
+  "n_episodes": 500,
+  "models_used": [
+    "none"
+  ],
+  "bootstrap": {
+    "samples": 2000,
+    "seed": 1729,
+    "method": "episode resampling percentile CI"
+  },
+  "significance_tests": "not performed",
+  "failure_case_count": 164
+}

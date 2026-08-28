@@ -1,0 +1,38 @@
+[
+  {
+    "agent_condition": "autonomous_task_completion_policy",
+    "n": "125",
+    "mean_executed_delegation_violation_rate": "0.082286",
+    "mean_human_interruption_burden": "0.200000",
+    "mean_attempted_delegation_violation_rate": "0.082286",
+    "mean_delivery_rate": "0.960000",
+    "mean_task_performance": "0.667544"
+  },
+  {
+    "agent_condition": "prompt_only_policy_proxy",
+    "n": "125",
+    "mean_executed_delegation_violation_rate": "0.000000",
+    "mean_human_interruption_burden": "0.776000",
+    "mean_attempted_delegation_violation_rate": "0.000000",
+    "mean_delivery_rate": "0.960000",
+    "mean_task_performance": "0.667544"
+  },
+  {
+    "agent_condition": "runtime_enforced_ceiling_comparator",
+    "n": "125",
+    "mean_executed_delegation_violation_rate": "0.000000",
+    "mean_human_interruption_burden": "0.200000",
+    "mean_attempted_delegation_violation_rate": "0.082286",
+    "mean_delivery_rate": "0.960000",
+    "mean_task_performance": "0.667544"
+  },
+  {
+    "agent_condition": "structured_delegation_policy",
+    "n": "125",
+    "mean_executed_delegation_violation_rate": "0.000000",
+    "mean_human_interruption_burden": "0.584000",
+    "mean_attempted_delegation_violation_rate": "0.000000",
+    "mean_delivery_rate": "0.960000",
+    "mean_task_performance": "0.667544"
+  }
+]

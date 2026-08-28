@@ -1,0 +1,17 @@
+{
+  "base_task_performance": 0.713357,
+  "collaborative_score": 0.713357,
+  "committed_item_id": "R022-1",
+  "comparison_preserved": true,
+  "delivered": true,
+  "delivery_rate": 1,
+  "draft_preserved": true,
+  "inspected_count": 3,
+  "rework_count": 0,
+  "search_results_preserved": true,
+  "side_effects": "simulated_only",
+  "step_budget": null,
+  "steps_consumed": 7,
+  "task_performance": 0.713357,
+  "utility_penalty": 0.0
+}

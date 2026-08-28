@@ -1,0 +1,46 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+.venv/
+dist/
+build/
+*.egg-info/
+work_dir/
+/upstream-collaborative-gym/
+
+# Local credentials and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets.toml
+
+# Redis/runtime state and transient logs
+dump.rdb
+appendonly.aof
+*.rdb
+*.aof
+*.pid
+*.log
+tmp/
+temp/
+
+# OS/editor artifacts
+.DS_Store
+.AppleDouble
+.LSOverride
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Irrelevant generated experiment scratch space
+results/_tmp/
+results/variant_runs/
+results/upstream_runner_smoke/runtime/

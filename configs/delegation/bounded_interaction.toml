@@ -1,0 +1,6 @@
+env_class = "delegation_task"
+
+[env_args]
+condition = "bounded_interaction"
+seed = 0
+runtime_enforced = false

@@ -1,0 +1,7 @@
+env_class = "delegation_task"
+
+[env_args]
+condition = "delegation_expansion"
+seed = 0
+runtime_enforced = false
+

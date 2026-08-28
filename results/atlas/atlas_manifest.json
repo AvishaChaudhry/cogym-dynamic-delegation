@@ -1,0 +1,5 @@
+{
+  "episodes": 500,
+  "outcome_twin_pairs": 20,
+  "outcome_epsilon": 0.01
+}

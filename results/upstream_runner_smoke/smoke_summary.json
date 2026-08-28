@@ -1,0 +1,31 @@
+{
+  "integration_type": "upstream Co-Gym Runner/Redis smoke session",
+  "upstream_commit": "58972c0702412f293e303c3e49b6cc896db2467a",
+  "session_uuid": "smoke_4b5e6a6247",
+  "event_count": 7,
+  "result_path": "results/upstream_runner_smoke/env_smoke_4b5e6a6247/task_performance.json",
+  "scientific_result": false,
+  "status": "passed",
+  "task_performance": {
+    "delivered": true,
+    "delivery_rate": 1,
+    "task_performance": 0.720714,
+    "collaborative_score": 0.720714,
+    "committed_item_id": "R000-2",
+    "comparison_preserved": true,
+    "draft_preserved": true,
+    "search_results_preserved": true,
+    "inspected_count": 3,
+    "side_effects": "simulated_only",
+    "base_task_performance": 0.720714,
+    "utility_penalty": 0.0,
+    "steps_consumed": 7,
+    "step_budget": null,
+    "rework_count": 0,
+    "attempted_delegation_violation_count": 0,
+    "executed_delegation_violation_count": 0,
+    "agent_task_action_attempts": 7,
+    "delegation_violation_rate": 0.0,
+    "delegation_metrics_scope": "environment actions only; use canonical runner for full metrics"
+  }
+}

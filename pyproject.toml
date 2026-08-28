@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "delegation-gym"
+version = "0.1.0"
+description = "Dynamic Delegation in Collaborative Gym: deterministic mechanism validation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Independent DelegationGym contributors"}]
+dependencies = ["numpy>=1.24", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "mypy>=1.10", "ruff>=0.6"]
+cogym = [
+  "co-gym @ git+https://github.com/SALT-NLP/collaborative-gym.git@58972c0702412f293e303c3e49b6cc896db2467a"
+]
+
+[project.scripts]
+delegation-gym-run = "delegation_gym.experiment:main"
+delegation-gym-evaluate = "delegation_gym.analysis:main"
+delegation-gym-atlas = "delegation_gym.atlas:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["delegation_gym"]
+follow_imports = "skip"
